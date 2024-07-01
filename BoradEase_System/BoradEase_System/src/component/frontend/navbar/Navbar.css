@@ -1,0 +1,125 @@
+.navbar {
+    height: 75px;
+    cursor: pointer;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    transition: 0.3s color;
+}
+
+.logo {
+    width: 160px;
+    height: 60px;
+}
+
+.login-button {
+    background-color: var(--color-bg);
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+
+.login-button:hover {
+    background-color: #00b383;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar-brand span {
+    color: var(--color-bg);
+}
+
+.offcanvas-title span {
+    color: var(--color-bg);
+}
+
+.us-nav {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+}
+
+.us-nav:hover {
+    color: var(--color-bg);
+}
+
+.nav-item .nav-link.active {
+    color: var(--color-bg);
+}
+
+.nav-item .nav-link.notactive {
+    color: white;
+}
+
+.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 991px) {
+    .us-nav::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: var(--color-bg);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .us-nav:hover::before,
+    .us-nav.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+
+    .us-nav.notactive::before {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 991px) {
+    .offcanvas {
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        line-height: 50px;
+        width: 100%;
+    }
+
+    .logo {
+        width: 160px;
+        height: 50px;
+    }
+
+    .login-button {
+        font-size: 12px;
+        margin-top: 12px;
+    }
+
+    .navbar-toggler{
+        margin-top: 12px;
+    }
+}
